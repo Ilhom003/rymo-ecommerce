@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route,Routes } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Brands from '../components/Brands'
@@ -7,6 +8,7 @@ import Collection from '../components/Collection'
 import Watches from '../components/Watches'
 import Shoes from '../components/Shoes'
 import Footer  from '../components/Footer'
+
 
 const Root = () => {
   return (

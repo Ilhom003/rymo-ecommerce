@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './style.css'
 import { Container, Header, Icons, Logo, NavItem, NavItems, Input } from './style'
 import logo from '../../assets/Imgs/brand/logo.jpg'
-import { NavLink } from 'react-router-dom'
+import { NavLink,useNavigate } from 'react-router-dom'
 import { BiSearch } from 'react-icons/bi'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { MdShoppingBasket } from 'react-icons/md'
@@ -15,6 +15,8 @@ import { Modal, Drawer, Space, Dropdown } from 'antd';
 
 
 const Navbar = () => {
+    const navigate = useNavigate()
+
     const [open, setOpen] = useState(false);
     const [opening, setOpening] = useState(false);
     // ////
@@ -74,7 +76,7 @@ const Navbar = () => {
 
 
             <Header>
-                <Logo src={logo} />
+                <Logo onClick={()=> navigate('/')} src={logo} />
                 <NavItems>
                     <NavItem>
                         <NavLink style={({ isActive }) => ({ color: isActive ? 'var(--orange)' : 'var(--grey)', fontWeight: isActive ? `800` : '500' })} className='nav_link' to='/'>Home</NavLink>
