@@ -4,7 +4,7 @@ import { WatchesData } from '../../utils/card'
 import Card  from '../Card'
 
 
-const Watches = () => {
+const Watches = (props) => {
     return (
         <Container>
             <TitleWrapper>
@@ -14,7 +14,7 @@ const Watches = () => {
             <Wrapper>
                 {
                     WatchesData.map(value=>(
-                        <Card key={value.id} image = {value.img}  title = {value.title} price = {value.price} rate = {value.rate}/>
+                        <Card key={value.id} image = {value.img} small  title = {value.title} price = {value.price} rate = {value.rate}/>
                     ))
                 }
             </Wrapper>

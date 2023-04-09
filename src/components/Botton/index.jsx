@@ -3,7 +3,7 @@ import { Btn } from './style'
 
 const Button = (props) => {
   return (
-    <Btn size = {props.large} cl ={props.type} >{props.children}</Btn>
+    <Btn onClick={props.onClick} size = {props.large} cl ={props.color} >{props.children}</Btn>
   )
 }
 

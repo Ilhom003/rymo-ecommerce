@@ -1,10 +1,13 @@
 import React from 'react'
 import { Container, Wrapper, Title, Description, TitleWrapper } from './style'
 import { newDatas } from '../../utils/card'
-import Card  from '../Card'
+import Card from '../Card'
+import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 
-const NewArrivals = () => {
+const NewArrivals = (props) => {
+    const navigate = useNavigate()
     return (
         <Container>
             <TitleWrapper>
@@ -13,8 +16,8 @@ const NewArrivals = () => {
             </TitleWrapper>
             <Wrapper>
                 {
-                    newDatas.map(value=>(
-                        <Card key={value.id} image = {value.img}  title = {value.title} price = {value.price} rate = {value.rate}/>
+                    newDatas.map(value => (
+                        <Card onClick={ ()=> navigate(`/shop/${value?.id}`) } key={value.id} image={value.img} title={value.title} price={value.price} rate={value.rate} />
                     ))
                 }
             </Wrapper>

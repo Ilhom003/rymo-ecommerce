@@ -8,7 +8,10 @@ margin: auto;
 `
 export const Wrapper = styled.div`
 display: flex;
+align-items:center
 justify-content:space-between;
+margin: auto;
+flex-wrap:wrap;
 `
 export const Img = styled.img`
 width: 180px;
